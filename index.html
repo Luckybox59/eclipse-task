@@ -8,6 +8,50 @@
   <title>Eclipse</title>
 </head>
 <body>
+
+  <div class="modal" id="modal-cart" data-dismiss="close">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span>Корзина</span>
+      </div>
+      <div class="modal-main">
+        <div class="cart-items">
+          <table>
+            <thead>
+              <tr>
+                <th>Название</th>
+                <th>Кол-во</th>
+                <th>Цена</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div><img src="./img/catalog/pants.png" alt="" height="40px">Брендовые штаны</div></td>
+                <td><div class="selector"><a class="delete"></a><input value="2" type="text" readonly><a class="add"></a></div></td>
+                <td>100руб.</td>
+                <td><a><img src="./img/remove.svg" alt="remove" height="25px"></a></td>
+              </tr>
+              <tr>
+                <td><div><img src="./img/catalog/pants.png" alt="" height="40px">Брендовые штаны</div></td>
+                <td><div class="selector"><a class="delete"></a><input value="2" type="text" readonly><a class="add"></a></div></td>
+                <td>100руб.</td>
+                <td><a><img src="./img/remove.svg" alt="remove" height="25px"></a></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                  <td>Итого</td>
+                  <td>3 шт.</td>
+                  <td>300р.</td>
+                  <td><a><img src="./img/right-arrow.svg" alt="next" height="25px"></a></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <header>
     <div class="logo">
       <a href="#">
@@ -18,10 +62,10 @@
       <input type="text">
     </div>
     <div class="cart">
-      <a href="">
+      <a href="#modal-cart" data-target="#modal-cart">
         <img src="./img/cart.png" alt="Cart">
-        <span>300 РУБ.</span>
       </a>
+      <span data-cart="amount">300 РУБ.</span>
     </div>
   </header>
   <nav>
