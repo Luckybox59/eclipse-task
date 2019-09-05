@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "babel": "npx babel common.js --out-file compiledES5.js --source-maps inline"
+    "babel": "npx babel es6.js --out-file compiledES5.js --source-maps inline"
   },
   "repository": {
     "type": "git",
