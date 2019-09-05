@@ -15,7 +15,7 @@
         <span>Корзина</span>
       </div>
       <div class="modal-main">
-        <div class="cart-items">
+        <div class="cart-items" id="cart-items">
           <table>
             <thead>
               <tr>
@@ -27,15 +27,15 @@
             <tbody>
               <tr>
                 <td><div><img src="./img/catalog/pants.png" alt="" height="40px">Брендовые штаны</div></td>
-                <td><div class="selector"><a class="delete"></a><input value="2" type="text" readonly><a class="add"></a></div></td>
+                <td><div class="selector"><a href="#" class="delete"></a><input value="2" type="text" readonly><a href="#" class="add"></a></div></td>
                 <td>100руб.</td>
-                <td><a><img src="./img/remove.svg" alt="remove" height="25px"></a></td>
+                <td><a href="#"><img src="./img/remove.svg" alt="remove" height="25px" data-cartBtn="delete"></a></td>
               </tr>
               <tr>
                 <td><div><img src="./img/catalog/pants.png" alt="" height="40px">Брендовые штаны</div></td>
-                <td><div class="selector"><a class="delete"></a><input value="2" type="text" readonly><a class="add"></a></div></td>
+                <td><div class="selector"><a href="#" class="delete"></a><input value="2" type="text" readonly><a href="#" class="add"></a></div></td>
                 <td>100руб.</td>
-                <td><a><img src="./img/remove.svg" alt="remove" height="25px"></a></td>
+                <td><a href="#"><img src="./img/remove.svg" alt="remove" height="25px" data-cartBtn="delete"></a></td>
               </tr>
             </tbody>
             <tfoot>
@@ -43,7 +43,7 @@
                   <td>Итого</td>
                   <td>3 шт.</td>
                   <td>300р.</td>
-                  <td><a><img src="./img/right-arrow.svg" alt="next" height="25px"></a></td>
+                  <td><a href="#"><img src="./img/right-arrow.svg" alt="next" height="25px"></a></td>
               </tr>
             </tfoot>
           </table>
@@ -60,15 +60,19 @@
     </div>
     <div class="search">
       <input type="text">
+      <a href="#">
+        <img src="./img/search.png" alt="">
+      </a>
     </div>
     <div class="cart">
-      <a href="#modal-cart" data-target="#modal-cart">
+      <a href="#" data-target="#modal-cart">
         <img src="./img/cart.png" alt="Cart">
       </a>
-      <span data-cart="amount">300 РУБ.</span>
+      <span data-cart="amount">0</span><span> РУБ.</span>
     </div>
   </header>
   <nav>
+    <a href="#" id="button-menu"><img src="./img/menu.png" alt="Меню" height="28px"></a>
     <ul class="menu">
       <li><a href="#">Главная</a></li>
       <li><a href="#">Распродажа</a></li>
@@ -95,10 +99,10 @@
             <div class="carousel-caption">
               <img src="./img/catalog/t-shirt1.png" alt="t-shirt Levi`s">
               <div class="carousel-content">
-                <h5>Футболки Levi`s</h5>
+                <h3>Футболки Levi`s</h3>
                 <p>Мужская футболка Levi's белого цвета с короткими рукавами и принтом. Эта футболка с круглым вырезом
                   изготовлена из натурального хлопка.</p>
-                <button>Купить сейчас</button>
+                <button data-operation="buy">Купить сейчас</button>
               </div>
             </div>
           </div>
@@ -106,10 +110,10 @@
             <div class="carousel-caption">
               <img src="./img/catalog/t-shirt2.png" alt="t-shirt Levi`s">
               <div class="carousel-content">
-                <h5>Футболки Levi`s</h5>
+                <h3>Футболки Levi`s</h3>
                 <p>Мужская футболка Levi's белого цвета с короткими рукавами и принтом. Эта футболка с круглым вырезом
                   изготовлена из натурального хлопка.</p>
-                <button>Купить сейчас</button>
+                <button data-operation="buy">Купить сейчас</button>
               </div>
             </div>
           </div>
@@ -117,10 +121,10 @@
             <div class="carousel-caption">
               <img src="./img/catalog/t-shirt3.png" alt="t-shirt Levi`s">
               <div class="carousel-content">
-                <h5>Футболки Levi`s</h5>
+                <h3>Футболки Levi`s</h3>
                 <p>Мужская футболка Levi's белого цвета с короткими рукавами и принтом. Эта футболка с круглым вырезом
                   изготовлена из натурального хлопка.</p>
-                <button>Купить сейчас</button>
+                <button data-operation="buy">Купить сейчас</button>
               </div>
             </div>
           </div>
@@ -128,10 +132,10 @@
             <div class="carousel-caption">
               <img src="./img/catalog/t-shirt4.png" alt="t-shirt Levi`s">
               <div class="carousel-content">
-                <h5>Футболки Levi`s</h5>
+                <h3>Футболки Levi`s</h3>
                 <p>Мужская футболка Levi's белого цвета с короткими рукавами и принтом. Эта футболка с круглым вырезом
                   изготовлена из натурального хлопка.</p>
-                <button>Купить сейчас</button>
+                <button data-operation="buy">Купить сейчас</button>
               </div>
             </div>
           </div>
@@ -139,10 +143,10 @@
             <div class="carousel-caption">
               <img src="./img/catalog/pants.png" alt="t-shirt Levi`s">
               <div class="carousel-content">
-                <h5>Футболки Levi`s</h5>
+                <h3>Футболки Levi`s</h3>
                 <p>Мужская футболка Levi's белого цвета с короткими рукавами и принтом. Эта футболка с круглым вырезом
                   изготовлена из натурального хлопка.</p>
-                <button>Купить сейчас</button>
+                <button data-operation="buy">Купить сейчас</button>
               </div>
             </div>
           </div>
@@ -156,42 +160,42 @@
           <img src="./img/catalog/shoes2.png" alt="">
           <div class="watch">
             <h3>Брендовая обувь</h3>
-            <button>Смотреть</button>
+            <button data-operation="show">Смотреть</button>
           </div>
         </div>
         <div>
           <img src="./img/catalog/t-shirt4.png" alt="">
           <div class="watch">
             <h3>Брендовые футболки</h3>
-            <button>Смотреть</button>
+            <button data-operation="show">Смотреть</button>
           </div>
         </div>
         <div>
           <img src="./img/catalog/pants.png" alt="">
           <div class="watch">
             <h3>Брендовые штаны</h3>
-            <button>Смотреть</button>
+            <button data-operation="show">Смотреть</button>
           </div>
         </div>
         <div>
           <img src="./img/catalog/shoes2.png" alt="">
           <div class="watch">
             <h3>Брендовая обувь</h3>
-            <button>Смотреть</button>
+            <button data-operation="show">Смотреть</button>
           </div>
         </div>
         <div>
           <img src="./img/catalog/t-shirt4.png" alt="">
           <div class="watch">
             <h3>Брендовые футболки</h3>
-            <button>Смотреть</button>
+            <button data-operation="show">Смотреть</button>
           </div>
         </div>
         <div>
           <img src="./img/catalog/pants.png" alt="">
           <div class="watch">
             <h3>Брендовые штаны</h3>
-            <button>Смотреть</button>
+            <button data-operation="show">Смотреть</button>
           </div>
         </div>
       </div>
@@ -200,37 +204,7 @@
       <div class="header">
         <h2>Товары</h2>
       </div>
-      <div class="cards">
-        <div class="card">
-          <img src="./img/catalog/shoes.png" alt="">
-          <h3>Туфли</h3>
-          <div class="buy"><span>100 руб.</span><button>Купить</button></div>
-        </div>
-        <div class="card">
-          <img src="./img/catalog/t-shirt2.png" alt="">
-          <h3>Фирменная футболка</h3>
-          <div class="buy"><span>100 руб.</span><button>Купить</button></div>
-        </div>
-        <div class="card">
-          <img src="./img/catalog/t-shirt3.png" alt="">
-          <h3>Футболка</h3>
-          <div class="buy"><span>100 руб.</span><button>Купить</button></div>
-        </div>
-        <div class="card">
-          <img src="./img/catalog/wallet.png" alt="">
-          <h3>Кошелёк</h3>
-          <div class="buy"><span>100 руб.</span><button>Купить</button></div>
-        </div>
-        <div class="card">
-          <img src="./img/catalog/bag.png" alt="">
-          <h3>Женская сумка</h3>
-          <div class="buy"><span>100 руб.</span><button>Купить</button></div>
-        </div>
-        <div class="card">
-          <img src="./img/catalog/pants.png" alt="">
-          <h3>Фирменные шорты</h3>
-          <div class="buy"><span>100 руб.</span><button>Купить</button></div>
-        </div>
+      <div class="cards" id="products-container">
       </div>
     </div>
   </main>
@@ -283,6 +257,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script type="text/javascript" src="./common.js"></script>
+  <script type="text/javascript" src="./compiledES5.js"></script>
 </body>
 </html> 

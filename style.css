@@ -54,7 +54,7 @@
   margin-top: 15vh;
   min-height: 20%;
   max-width: 700px;
-  min-width: 300px;
+  min-width: 200px;
   background-color: #fff;
   box-shadow: 1px 1px;
 }
@@ -202,9 +202,10 @@ body {
 header {
   border: 1px solid lightgray;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  height: 82px;
+  min-height: 82px;
   background-color: #ffffff;
 }
 
@@ -213,14 +214,27 @@ header {
 }
 
 .search {
+  display: flex;
+  position: relative;
   flex-basis: 30%;
 }
 
 .search input {
+  min-width: 100px;
+  padding-left: 5px;
+  padding-right: 30px;
   height: 31px;
   width: 100%;
   border: 1px solid #e1e1e1;
   background-color: #ffffff;
+}
+
+.search a {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
 }
 
 .cart a {
@@ -231,6 +245,7 @@ header {
 }
 
 .cart span {
+  margin-right: 10px;
   font-family: 'Bebas Neue Bold', sans-serif;
   color: #a1a1a1;
   font-size: 33px;
@@ -238,6 +253,10 @@ header {
 
 nav {
   background-color: #00a9d8;
+}
+
+#button-menu {
+  display: none;
 }
 
 .menu {
@@ -297,7 +316,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: 100%;
 }
 
@@ -313,7 +331,7 @@ main {
   color: #ffffff;
 }
 
-.carousel-content h5 {
+.carousel-content h3 {
   font-family: 'Bebas Neue Regular', sans-serif;
   font-size: 61px;
   font-weight: 400;
@@ -410,6 +428,7 @@ main {
   font-size: 27px;
   font-weight: 400;
   line-height: 25px;
+  margin-bottom: 15px;
 }
 
 .multiple-items .watch button {
@@ -471,6 +490,7 @@ main {
   margin-top: 25px;
   font-size: 27px;
   font-weight: 400;
+  text-align: center;
 }
 
 .card .buy {
@@ -545,4 +565,84 @@ footer nav a {
   font-family: 'Open Sans', sans-serif;
   color: #ffffff;
   font-weight: 400;
+}
+
+button[data-operation="buy"],
+button[data-operation="show"] {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+  
+  .show-menu {
+    display: flex;
+  }
+
+  #button-menu {
+    display: inline-block;
+  }
+  
+  .menu a {
+    border-right: none;
+  }
+  
+  .carousel-caption img {
+    display: none;
+  }
+  .slider2 {
+    height: 3px;
+    background-color: #ffffff;
+  }
+  .multiple-items {
+    display: none;
+  }
+  .products .header {
+    text-align: center;
+  }
+  .products .header h2 {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    justify-content: space-around;
+  }
+  
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer nav {
+    justify-content: space-around;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .for-men,
+  .for-women {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search,
+  .cart {
+    width: 100%;
+  }
+
+  .cart {
+    text-align: center;
+  }
+
+  .carousel-caption {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
